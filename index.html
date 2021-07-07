@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <!-- This is loading FB to our app -->
+        <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-app.js"></script>
+
+        <!-- This is loading only the firestore -->
+        <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-firestore.js"></script>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+
+        <h1>Cloud Cafe</h1>
+
+        <div class="content">
+
+            <form id="add-cafe-form"></form>
+
+            <ul id="cafe-list"></ul>
+
+        </div>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-analytics.js"></script>
+
+        <script>
+          // Your web app's Firebase configuration
+          // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+          var firebaseConfig = {
+            apiKey: "AIzaSyD-3-mFuXRV7BCxZ4EC9mWxjrE3f2vll0A",
+            authDomain: "ninja-firestore-tut-42215.firebaseapp.com",
+            projectId: "ninja-firestore-tut-42215",
+            storageBucket: "ninja-firestore-tut-42215.appspot.com",
+            messagingSenderId: "160609679713",
+            appId: "1:160609679713:web:4743024c20845e5f2aad20",
+            measurementId: "G-NMYHZ95PJL"
+          };
+          // Initialize Firebase
+          firebase.initializeApp(firebaseConfig);
+          firebase.analytics();
+          const db = firebase.firestore()
+          db.settings({ timestampInSnapshots: true });
+        </script>
+        <script src="app.js"></script>
+    </body>
+</html>
