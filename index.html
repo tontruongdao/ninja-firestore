@@ -40,7 +40,7 @@
           firebase.initializeApp(firebaseConfig);
           firebase.analytics();
           const db = firebase.firestore()
-          db.settings({ timestampInSnapshots: true });
+          db.settings({ timestampsInSnapshots: true });
         </script>
         <script src="app.js"></script>
     </body>
