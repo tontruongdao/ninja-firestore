@@ -79,3 +79,16 @@ db.collection('cafes').orderBy('city').onSnapshot(snapshot => {
     }
   })
 })
+
+
+// Code to Update Data
+
+// This UPDATES the data
+// db.collection('cafes').doc('X9lnbM7zilO2MsAHzYqV').update({
+//   name: 'Wario Yard'
+// })
+
+// This OVERWRITES the data
+// db.collection('cafes').doc('X9lnbM7zilO2MsAHzYqV').set({
+//   name: 'Wario Yard'
+// })
