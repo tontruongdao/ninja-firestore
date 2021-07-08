@@ -32,11 +32,20 @@ const renderCafe = (doc) => {
 
 
 // Getting Data
-db.collection("cafes").get().then((snapshot) => {
+// db.collection("cafes").get().then((snapshot) => {
+//   snapshot.docs.forEach(doc => {
+//     renderCafe(doc)
+//   })
+// })
+
+
+// Getting Specific Data
+db.collection("cafes").where('city', '<', 'n').get().then((snapshot) => {
   snapshot.docs.forEach(doc => {
     renderCafe(doc)
   })
 })
+
 
 // Saving Data
 form.addEventListener('submit', (e) => {
