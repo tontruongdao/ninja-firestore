@@ -40,7 +40,15 @@ const renderCafe = (doc) => {
 
 
 // Getting Specific Data
-db.collection("cafes").where('city', '<', 'n').get().then((snapshot) => {
+// db.collection("cafes").where('city', '<', 'n').get().then((snapshot) => {
+//   snapshot.docs.forEach(doc => {
+//     renderCafe(doc)
+//   })
+// })
+
+// Getting Data and Ordering Data
+
+db.collection("cafes").orderBy('name').get().then((snapshot) => {
   snapshot.docs.forEach(doc => {
     renderCafe(doc)
   })
